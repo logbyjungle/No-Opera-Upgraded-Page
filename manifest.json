@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Block 'Opera Upgraded' Page",
+    "version": "0.1",
+    "permissions": ["declarativeNetRequest"],
+    "description": "Block and remove the https://www.opera.com/client/upgraded* page",
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "rules",
+                "path": "rules.json",
+                "enabled": true
+            }
+        ]
+    },
+    "host_permissions": ["https://www.opera.com/client/upgraded*"],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
